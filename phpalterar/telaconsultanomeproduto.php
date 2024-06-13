@@ -7,10 +7,11 @@
     <title>Document</title>
 </head>
 <body>
-     <form action="telaexibirdadosprodutos.php" method="POST">
-      Digite o nome do Produto: <br>
-      <input type="text" name="cxpesquisaproduto"/>
-      <input type="submit" value="Pesquisar">
-     </form>
+    <form action="telaexibirdadosproduto.php" method="POST">
+        Digite o nome do produto:
+        <input type="text" name="cxpesquisaproduto">
+        <input type="submit" value="Pesquisar">
+    </form>
+    
 </body>
 </html>

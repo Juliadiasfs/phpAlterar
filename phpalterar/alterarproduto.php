@@ -1,26 +1,23 @@
 <?php
-include_once "factory/conexao.php";
-$id = $_POST["cxcodigo"];
-$produto = $_POST["cxproduto"];
-$marca = $_POST["cxmarca"];
+    include_once "factory/conexao.php";
+    $id = $_POST["cxcodigo"];
+    $produto = $_POST["cxproduto"];
+    $marca = $_POST["cxmarca"];
 
-$alterar = "UPDATE tbproduto SET
+    $alterar = "
+    UPDATE tbproduto SET 
     produto = '$produto',
     marca = '$marca'
-    where
+    where 
     codigo = '$id'
+    ";
 
-";
+    $executar = mysqli_query($conn, $alterar);
+    if($executar){
+        echo "Dados alterados com sucesso";
+    }else{
+        echo "Erro ao alterar os dados";
 
-$executar = mysqli_query($conn,$alterar);
-if($executar)
-{
-    echo"Dados alterarados com sucesso!";
-}
-else
-{
-    echo "Erro ao alterar dados!";
-}
+    }
 ?>
-
-<a href="telaconsultanomeproduto.php">Volta</a>
+<a href="telaconsultanomeproduto.php">Voltar</a>
